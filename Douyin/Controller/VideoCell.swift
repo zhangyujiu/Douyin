@@ -11,6 +11,7 @@ import MarqueeLabel
 import Kingfisher
 import KingfisherWebP
 import ChainableAnimations
+import Lottie
 
 class VideoCell: UITableViewCell {
 
@@ -44,6 +45,9 @@ class VideoCell: UITableViewCell {
         }
     }
     
+    @IBAction func clickLike(_ sender: ScaleAnimateButton) {
+        like()
+    }
     @IBAction func clickFollow(_ sender: UIButton) {
         self.animator1=ChainableAnimator(view: sender)
         
@@ -105,6 +109,21 @@ class VideoCell: UITableViewCell {
         gameView.raiseAnimation(imageName:"ic_music",delay:0)
         gameView.raiseAnimation(imageName:"ic_music",delay:1)
         gameView.raiseAnimation(imageName:"ic_music",delay:2)
+    }
+    
+    func like() {
+        let cgRect=likeBtn.convert(CGRect(), to: self)
+        let sizeWidth:CGFloat=100.0
+        let animationView = AnimationView(name: "like")
+        let x=cgRect.minX+likeBtn.bounds.width/2-sizeWidth/2
+        let y=cgRect.minY+likeBtn.bounds.width/2-sizeWidth/2
+        animationView.frame = CGRect(x: x , y: y, width: sizeWidth, height: sizeWidth)
+        self.addSubview(animationView)
+        likeBtn.alpha=0
+        animationView.play { (isFinished) in
+            self.likeBtn.alpha=1
+            animationView.removeFromSuperview()
+        }
     }
 
 }

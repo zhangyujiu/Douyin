@@ -118,6 +118,9 @@
                                                                         <constraint firstAttribute="width" constant="35" id="76p-0M-cfK"/>
                                                                     </constraints>
                                                                     <state key="normal" image="ic_video_detail_like"/>
+                                                                    <connections>
+                                                                        <action selector="clickLike:" destination="8AK-T6-Zbe" eventType="touchUpInside" id="izB-B3-Ui0"/>
+                                                                    </connections>
                                                                 </button>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zo9-xX-9l6">
                                                                     <rect key="frame" x="12.5" y="43" width="10.5" height="20.5"/>

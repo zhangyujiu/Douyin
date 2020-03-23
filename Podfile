@@ -17,4 +17,5 @@ target 'Douyin' do
   pod 'SnapKit'
   pod 'SwiftyJSON'
   pod "KingfisherWebP"
+  pod 'lottie-ios'
 end

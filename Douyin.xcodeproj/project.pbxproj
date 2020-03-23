@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		82AE3452932C2BE7FF64A93E /* Pods_Douyin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA390482DD4BA7A22794ABEA /* Pods_Douyin.framework */; };
 		E8117B602423B5D500287C4D /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8117B5F2423B5D500287C4D /* VideoCell.swift */; };
+		E82272892428A7DB007ED29A /* like.json in Resources */ = {isa = PBXBuildFile; fileRef = E82272882428A7DB007ED29A /* like.json */; };
 		E88243562420FEDA00C23AF8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88243552420FEDA00C23AF8 /* AppDelegate.swift */; };
 		E88243582420FEDA00C23AF8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88243572420FEDA00C23AF8 /* ViewController.swift */; };
 		E882435B2420FEDA00C23AF8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E88243592420FEDA00C23AF8 /* Main.storyboard */; };
@@ -25,6 +26,7 @@
 		67E823098E5E63003DF261E6 /* Pods-Douyin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Douyin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Douyin/Pods-Douyin.debug.xcconfig"; sourceTree = "<group>"; };
 		DA390482DD4BA7A22794ABEA /* Pods_Douyin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Douyin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8117B5F2423B5D500287C4D /* VideoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCell.swift; sourceTree = "<group>"; };
+		E82272882428A7DB007ED29A /* like.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = like.json; sourceTree = "<group>"; };
 		E88243522420FEDA00C23AF8 /* Douyin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Douyin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E88243552420FEDA00C23AF8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E88243572420FEDA00C23AF8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -67,6 +69,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		E822728A2428B348007ED29A /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				E82272882428A7DB007ED29A /* like.json */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 		E88243492420FEDA00C23AF8 = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +100,7 @@
 			children = (
 				E882435C2420FEDB00C23AF8 /* Assets.xcassets */,
 				E88243612420FEDB00C23AF8 /* Info.plist */,
+				E822728A2428B348007ED29A /* Assets */,
 				E8CBFCC524274C12003CF329 /* Net */,
 				E8CBFCC224273F39003CF329 /* Library */,
 				E8CBFCBF24265A5E003CF329 /* Helper */,
@@ -214,6 +225,7 @@
 			files = (
 				E88243602420FEDB00C23AF8 /* LaunchScreen.storyboard in Resources */,
 				E882435D2420FEDB00C23AF8 /* Assets.xcassets in Resources */,
+				E82272892428A7DB007ED29A /* like.json in Resources */,
 				E882435B2420FEDA00C23AF8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -255,6 +267,7 @@
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/libwebp/libwebp.framework",
+				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -267,6 +280,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/libwebp.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
