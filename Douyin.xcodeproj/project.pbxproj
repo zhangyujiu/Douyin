@@ -10,6 +10,8 @@
 		82AE3452932C2BE7FF64A93E /* Pods_Douyin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA390482DD4BA7A22794ABEA /* Pods_Douyin.framework */; };
 		E8117B602423B5D500287C4D /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8117B5F2423B5D500287C4D /* VideoCell.swift */; };
 		E82272892428A7DB007ED29A /* like.json in Resources */ = {isa = PBXBuildFile; fileRef = E82272882428A7DB007ED29A /* like.json */; };
+		E822728C2428B984007ED29A /* CommentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E822728B2428B984007ED29A /* CommentController.swift */; };
+		E822728E2428F848007ED29A /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E822728D2428F848007ED29A /* CommentCell.swift */; };
 		E88243562420FEDA00C23AF8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88243552420FEDA00C23AF8 /* AppDelegate.swift */; };
 		E88243582420FEDA00C23AF8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88243572420FEDA00C23AF8 /* ViewController.swift */; };
 		E882435B2420FEDA00C23AF8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E88243592420FEDA00C23AF8 /* Main.storyboard */; };
@@ -27,6 +29,8 @@
 		DA390482DD4BA7A22794ABEA /* Pods_Douyin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Douyin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8117B5F2423B5D500287C4D /* VideoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCell.swift; sourceTree = "<group>"; };
 		E82272882428A7DB007ED29A /* like.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = like.json; sourceTree = "<group>"; };
+		E822728B2428B984007ED29A /* CommentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentController.swift; sourceTree = "<group>"; };
+		E822728D2428F848007ED29A /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
 		E88243522420FEDA00C23AF8 /* Douyin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Douyin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E88243552420FEDA00C23AF8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E88243572420FEDA00C23AF8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -126,6 +130,8 @@
 				E88243552420FEDA00C23AF8 /* AppDelegate.swift */,
 				E88243572420FEDA00C23AF8 /* ViewController.swift */,
 				E8117B5F2423B5D500287C4D /* VideoCell.swift */,
+				E822728B2428B984007ED29A /* CommentController.swift */,
+				E822728D2428F848007ED29A /* CommentCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -295,9 +301,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E8117B602423B5D500287C4D /* VideoCell.swift in Sources */,
+				E822728C2428B984007ED29A /* CommentController.swift in Sources */,
 				E88243582420FEDA00C23AF8 /* ViewController.swift in Sources */,
 				E882436A242106CF00C23AF8 /* VideoEntity.swift in Sources */,
 				E8CBFCC424273F62003CF329 /* ScaleAnimateButton.swift in Sources */,
+				E822728E2428F848007ED29A /* CommentCell.swift in Sources */,
 				E8C3993E24226F7800870AE1 /* Api.swift in Sources */,
 				E88243562420FEDA00C23AF8 /* AppDelegate.swift in Sources */,
 				E8CBFCC124265A81003CF329 /* UIHelper.swift in Sources */,

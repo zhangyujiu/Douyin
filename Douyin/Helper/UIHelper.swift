@@ -8,6 +8,11 @@
 
 import UIKit
 var layers:[CAShapeLayer] = []
+
+@IBDesignable open class ClippedView:UIView{
+    
+}
+
 extension UIView {
  @IBInspectable public var cornerRadius: CGFloat {
         get {
@@ -35,6 +40,44 @@ extension UIView {
             layer.borderColor=newValue.cgColor
         }
     }
+    
+    @IBInspectable public var shadowColor:UIColor{
+        get{
+            UIColor(cgColor: layer.shadowColor!)
+        }
+        set{
+            layer.shadowColor=newValue.cgColor
+        }
+    }
+    
+    @IBInspectable public var shadowOffset:CGSize{
+        get{
+            layer.shadowOffset
+        }
+        set{
+            layer.shadowOffset=newValue
+        }
+    }
+    
+    @IBInspectable public var shadowRadius:CGFloat{
+        get{
+            layer.shadowRadius
+        }
+        set{
+            layer.shadowRadius=newValue
+        }
+    }
+    
+    @IBInspectable public var shadowOpacity:Float{
+        get{
+            layer.shadowOpacity
+        }
+        set{
+            layer.shadowOpacity=newValue
+            layer.masksToBounds=false
+        }
+    }
+    
     
     func raiseAnimation(imageName:String,delay:TimeInterval){
         let path=UIBezierPath()

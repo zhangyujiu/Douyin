@@ -29,7 +29,8 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         let cell = tableView.dequeueReusableCell(withIdentifier: "VideoCell", for: indexPath) as! VideoCell
         let videoEntity = videos[indexPath.row]
         cell.videoEntity = videoEntity
-        
+        //去除点击cell的阴影效果
+        cell.selectionStyle = UITableViewCell.SelectionStyle.none
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
