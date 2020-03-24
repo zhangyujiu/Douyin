@@ -53,20 +53,33 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
 //        self.loadData(page:pageIndex)
         currentPage=tableView.indexPathsForVisibleRows!.last!.row
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier=="showComment"{
+            let button=sender as! UIButton
+            let pointInTable=button.convert(button.bounds.origin, to: tableView)
+            let cellIndexPath = tableView.indexPathForRow(at: pointInTable)
+            let commentController=segue.destination as! CommentController
+            commentController.videoId=videos[cellIndexPath!.row]._id
+            commentController.commentCount=videos[cellIndexPath!.row].comment_count
+        }
+    }
 
 
     private func loadData(page:Int){
-       AF.request("\(Api.baseUrl)?page=\(page)").responseJSON(){ response in
+        AF.request("\(Api.baseUrl)\(Api.videos)?page=\(page)").responseJSON(){ response in
             
             let jsonData=response.data
             let decoder = JSONDecoder()
-            let datas = try! decoder.decode([VideoEntity].self, from: jsonData!)
-            self.videos += datas
-            self.tableView.reloadData()
+            do{
+                let datas = try decoder.decode([VideoEntity].self, from: jsonData!)
+                self.videos += datas
+                self.tableView.reloadData()
+            }catch{
+                print(error)
+            }
         }
        
-       
-        
     }
 }
 

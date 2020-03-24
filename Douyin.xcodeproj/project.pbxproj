@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		82AE3452932C2BE7FF64A93E /* Pods_Douyin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA390482DD4BA7A22794ABEA /* Pods_Douyin.framework */; };
 		E8117B602423B5D500287C4D /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8117B5F2423B5D500287C4D /* VideoCell.swift */; };
+		E81D22472429F8E50045FB9D /* TimeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81D22462429F8E50045FB9D /* TimeHelper.swift */; };
 		E82272892428A7DB007ED29A /* like.json in Resources */ = {isa = PBXBuildFile; fileRef = E82272882428A7DB007ED29A /* like.json */; };
 		E822728C2428B984007ED29A /* CommentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E822728B2428B984007ED29A /* CommentController.swift */; };
 		E822728E2428F848007ED29A /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E822728D2428F848007ED29A /* CommentCell.swift */; };
@@ -21,6 +22,7 @@
 		E8C3993E24226F7800870AE1 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C3993D24226F7800870AE1 /* Api.swift */; };
 		E8CBFCC124265A81003CF329 /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CBFCC024265A81003CF329 /* UIHelper.swift */; };
 		E8CBFCC424273F62003CF329 /* ScaleAnimateButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CBFCC324273F62003CF329 /* ScaleAnimateButton.swift */; };
+		E8E5914F2429DC5A00B72C2A /* CommentEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E5914E2429DC5A00B72C2A /* CommentEntity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,7 @@
 		67E823098E5E63003DF261E6 /* Pods-Douyin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Douyin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Douyin/Pods-Douyin.debug.xcconfig"; sourceTree = "<group>"; };
 		DA390482DD4BA7A22794ABEA /* Pods_Douyin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Douyin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8117B5F2423B5D500287C4D /* VideoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCell.swift; sourceTree = "<group>"; };
+		E81D22462429F8E50045FB9D /* TimeHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeHelper.swift; sourceTree = "<group>"; };
 		E82272882428A7DB007ED29A /* like.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = like.json; sourceTree = "<group>"; };
 		E822728B2428B984007ED29A /* CommentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentController.swift; sourceTree = "<group>"; };
 		E822728D2428F848007ED29A /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
@@ -42,6 +45,7 @@
 		E8C3993D24226F7800870AE1 /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
 		E8CBFCC024265A81003CF329 /* UIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
 		E8CBFCC324273F62003CF329 /* ScaleAnimateButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleAnimateButton.swift; sourceTree = "<group>"; };
+		E8E5914E2429DC5A00B72C2A /* CommentEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentEntity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				E8824369242106CF00C23AF8 /* VideoEntity.swift */,
+				E8E5914E2429DC5A00B72C2A /* CommentEntity.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -148,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				E8CBFCC024265A81003CF329 /* UIHelper.swift */,
+				E81D22462429F8E50045FB9D /* TimeHelper.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -268,6 +274,7 @@
 				"${BUILT_PRODUCTS_DIR}/ChainableAnimations/ChainableAnimations.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/KingfisherWebP/KingfisherWebP.framework",
+				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
 				"${BUILT_PRODUCTS_DIR}/MarqueeLabel/MarqueeLabel.framework",
 				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
@@ -281,6 +288,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChainableAnimations.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KingfisherWebP.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MarqueeLabel.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
@@ -300,10 +308,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8E5914F2429DC5A00B72C2A /* CommentEntity.swift in Sources */,
 				E8117B602423B5D500287C4D /* VideoCell.swift in Sources */,
 				E822728C2428B984007ED29A /* CommentController.swift in Sources */,
 				E88243582420FEDA00C23AF8 /* ViewController.swift in Sources */,
 				E882436A242106CF00C23AF8 /* VideoEntity.swift in Sources */,
+				E81D22472429F8E50045FB9D /* TimeHelper.swift in Sources */,
 				E8CBFCC424273F62003CF329 /* ScaleAnimateButton.swift in Sources */,
 				E822728E2428F848007ED29A /* CommentCell.swift in Sources */,
 				E8C3993E24226F7800870AE1 /* Api.swift in Sources */,

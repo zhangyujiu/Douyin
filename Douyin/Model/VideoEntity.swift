@@ -10,6 +10,7 @@ import Foundation
 
 
 struct VideoEntity : Codable {
+    var _id:String = ""
     var title:String = ""
     var poster:String = ""
     var url:String = ""
@@ -19,6 +20,7 @@ struct VideoEntity : Codable {
     var vote:Int = 0
     var share:Int = 0
     var comment_count:Int = 0
+    var game_id:String=""
     
     
     

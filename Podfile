@@ -18,4 +18,5 @@ target 'Douyin' do
   pod 'SwiftyJSON'
   pod "KingfisherWebP"
   pod 'lottie-ios'
+  pod 'MJRefresh'
 end

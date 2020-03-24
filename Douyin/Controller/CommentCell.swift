@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Kingfisher
+import KingfisherWebP
 
 class CommentCell: UITableViewCell {
 
@@ -17,6 +19,12 @@ class CommentCell: UITableViewCell {
     @IBOutlet weak var replayBtn: UIButton!
     @IBOutlet weak var likeBtn: UIButton!
     @IBOutlet weak var moreBtn: UIButton!
+    
+    var commentEntity:CommentEntity!{
+        didSet{
+            updateUI()
+        }
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -29,4 +37,10 @@ class CommentCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    func updateUI(){
+        userHead.kf.setImage(with: URL(string: commentEntity.user.icon), for: .normal)
+        userName.text=commentEntity.user.name
+        userComment.text=commentEntity.content
+        commentTime.text=TimeHelper.timeStamp2String(timeStamp: commentEntity.time)
+    }
 }

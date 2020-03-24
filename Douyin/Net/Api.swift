@@ -9,5 +9,7 @@
 import Foundation
 
 struct Api {
-    static let baseUrl="https://dev.api.ghzs666.com/v3d7d5/videos/stream"
+    static let baseUrl="https://dev.api.ghzs666.com/v3d7d5/"
+    static let videos="videos/stream"
+    static let comments="videos/%@/comments"
 }

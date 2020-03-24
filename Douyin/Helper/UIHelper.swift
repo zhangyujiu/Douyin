@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import MJRefresh
+
 var layers:[CAShapeLayer] = []
 
 @IBDesignable open class ClippedView:UIView{
@@ -137,5 +139,16 @@ extension UIView {
             layer.removeFromSuperlayer()
         }
         self.layer.removeAllAnimations()
+    }
+}
+
+extension MJRefreshNormalHeader{
+    func mormalStyle(){
+        stateLabel?.textColor=UIColor.white
+        setTitle("下拉刷新", for: .idle)
+        setTitle("释放更新", for: .pulling)
+        setTitle("正在刷新...", for: .refreshing)
+        lastUpdatedTimeLabel?.isHidden = true
+        
     }
 }
