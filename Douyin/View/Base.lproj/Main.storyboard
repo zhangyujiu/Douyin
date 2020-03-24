@@ -28,6 +28,10 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="600"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BQj-bc-z7y">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="600"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </view>
                                                 <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_game_detail_play" translatesAutoresizingMaskIntoConstraints="NO" id="wGI-dv-MJU">
                                                     <rect key="frame" x="174" y="267" width="66" height="66"/>
                                                 </imageView>
@@ -201,14 +205,20 @@
                                             <constraints>
                                                 <constraint firstItem="wGI-dv-MJU" firstAttribute="centerY" secondItem="OiV-f8-vVJ" secondAttribute="centerY" id="6QD-zs-FSF"/>
                                                 <constraint firstItem="t5V-VG-YNu" firstAttribute="leading" secondItem="OiV-f8-vVJ" secondAttribute="leading" id="CMw-dk-7Wl"/>
+                                                <constraint firstItem="BQj-bc-z7y" firstAttribute="leading" secondItem="OiV-f8-vVJ" secondAttribute="leading" id="ECd-5w-vI6"/>
+                                                <constraint firstItem="BQj-bc-z7y" firstAttribute="centerY" secondItem="OiV-f8-vVJ" secondAttribute="centerY" id="F3m-nJ-FFb"/>
                                                 <constraint firstAttribute="bottom" secondItem="t5V-VG-YNu" secondAttribute="bottom" id="FCB-hP-5NF"/>
+                                                <constraint firstAttribute="bottom" secondItem="BQj-bc-z7y" secondAttribute="bottom" id="KBT-YN-lkp"/>
                                                 <constraint firstItem="wGI-dv-MJU" firstAttribute="centerX" secondItem="OiV-f8-vVJ" secondAttribute="centerX" id="PWT-Ey-L7X"/>
                                                 <constraint firstAttribute="trailing" secondItem="t5V-VG-YNu" secondAttribute="trailing" id="YBK-nf-4Se"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="4wb-B3-z21" secondAttribute="bottom" constant="20" id="gyJ-Yl-lIE"/>
                                                 <constraint firstItem="t5V-VG-YNu" firstAttribute="top" secondItem="OiV-f8-vVJ" secondAttribute="top" id="hjo-Qf-Gxh"/>
                                                 <constraint firstAttribute="trailing" secondItem="UeR-vO-V5i" secondAttribute="trailing" constant="20" symbolic="YES" id="j7E-00-CS9"/>
                                                 <constraint firstItem="4wb-B3-z21" firstAttribute="width" secondItem="OiV-f8-vVJ" secondAttribute="width" multiplier="0.7" id="laL-FQ-oQR"/>
+                                                <constraint firstAttribute="trailing" secondItem="BQj-bc-z7y" secondAttribute="trailing" id="m8D-kn-YE2"/>
                                                 <constraint firstItem="4wb-B3-z21" firstAttribute="leading" secondItem="OiV-f8-vVJ" secondAttribute="leadingMargin" id="pyk-R4-KC4"/>
+                                                <constraint firstItem="BQj-bc-z7y" firstAttribute="top" secondItem="OiV-f8-vVJ" secondAttribute="top" id="rDv-8q-Fvp"/>
+                                                <constraint firstItem="BQj-bc-z7y" firstAttribute="centerX" secondItem="OiV-f8-vVJ" secondAttribute="centerX" id="rQx-xP-e80"/>
                                                 <constraint firstAttribute="bottom" secondItem="UeR-vO-V5i" secondAttribute="bottom" constant="30" id="ycn-jy-W5h"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -216,7 +226,7 @@
                                         <connections>
                                             <outlet property="commentCount" destination="20d-fj-Vl4" id="43v-WR-Ehc"/>
                                             <outlet property="commentView" destination="232-e5-6FU" id="ZqU-i8-OfK"/>
-                                            <outlet property="coverImageview" destination="t5V-VG-YNu" id="PNf-Q5-rqL"/>
+                                            <outlet property="coverImage" destination="t5V-VG-YNu" id="WyD-TM-FgF"/>
                                             <outlet property="followBtn" destination="0Zm-Up-mel" id="oqR-PV-WdB"/>
                                             <outlet property="gameIcon" destination="rxf-zi-Uea" id="jQy-7e-PzU"/>
                                             <outlet property="gameName" destination="DzJ-zR-je9" id="DDg-RG-1RQ"/>
@@ -230,6 +240,7 @@
                                             <outlet property="shareView" destination="xgw-AW-qsz" id="jtm-ic-XBy"/>
                                             <outlet property="title" destination="WAK-jN-rCL" id="hRK-d7-WCu"/>
                                             <outlet property="userHeadImage" destination="3gC-cy-f4a" id="vPN-SG-CbS"/>
+                                            <outlet property="videoContainer" destination="BQj-bc-z7y" id="LvP-UC-CH2"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

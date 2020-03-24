@@ -12,11 +12,12 @@ target 'Douyin' do
   pod 'Alamofire'
   pod 'Kingfisher'
   pod 'MarqueeLabel'
-  pod 'NVActivityIndicatorView'
+  #pod 'NVActivityIndicatorView'
   pod 'ChainableAnimations'
   pod 'SnapKit'
   pod 'SwiftyJSON'
   pod "KingfisherWebP"
   pod 'lottie-ios'
   pod 'MJRefresh'
+  pod 'BMPlayer', '~> 1.3.0'
 end

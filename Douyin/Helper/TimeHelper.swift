@@ -8,8 +8,8 @@
 import Foundation
 
 struct TimeHelper {
+    //时间戳转换为字符串
     static func timeStamp2String(timeStamp:Int)->String{
-        //转换为时间
         let timeInterval:TimeInterval = TimeInterval(timeStamp)
         let date = NSDate(timeIntervalSince1970: timeInterval)
          

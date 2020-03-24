@@ -20,7 +20,21 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     override var preferredStatusBarStyle: UIStatusBarStyle {
         .lightContent
     }
+    override func viewDidLoad() {
+           super.viewDidLoad()
+           self.extendedLayoutIncludesOpaqueBars=false
+           self.loadData(page:pageIndex)
+           
+           NotificationCenter.default.addObserver(self,
+           selector: #selector(self.appEnteredFromBackground),
+           name: UIApplication.willEnterForegroundNotification, object: nil)
+       }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        pausePlayeVideos()
+    }
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return videos.count
     }
@@ -37,11 +51,12 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.extendedLayoutIncludesOpaqueBars=false
-        self.loadData(page:pageIndex)
+    func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if let videoCell = cell as? ASAutoPlayVideoLayerContainer, let _ = videoCell.videoURL {
+            ASVideoPlayerController.sharedVideoPlayer.removeLayerFor(cell: videoCell)
+        }
     }
+    
     //行高
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UIScreen.main.bounds.size.height
@@ -49,9 +64,20 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     
     //拖动结束
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-//        pageIndex+=1
-//        self.loadData(page:pageIndex)
+        pausePlayeVideos()
+
         currentPage=tableView.indexPathsForVisibleRows!.last!.row
+        if currentPage == (videos.count - 1)  {
+            pageIndex+=1
+            self.loadData(page:pageIndex)
+        }
+    }
+    
+    
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        if !decelerate {
+            pausePlayeVideos()
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -80,6 +106,13 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
             }
         }
        
+    }
+    func pausePlayeVideos(){
+        ASVideoPlayerController.sharedVideoPlayer.pausePlayeVideosFor(tableView: tableView)
+    }
+    
+    @objc func appEnteredFromBackground(){
+        ASVideoPlayerController.sharedVideoPlayer.pausePlayeVideosFor(tableView: tableView, appEnteredFromBackground: true)
     }
 }
 

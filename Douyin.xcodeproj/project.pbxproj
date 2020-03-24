@@ -10,6 +10,9 @@
 		82AE3452932C2BE7FF64A93E /* Pods_Douyin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA390482DD4BA7A22794ABEA /* Pods_Douyin.framework */; };
 		E8117B602423B5D500287C4D /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8117B5F2423B5D500287C4D /* VideoCell.swift */; };
 		E81D22472429F8E50045FB9D /* TimeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81D22462429F8E50045FB9D /* TimeHelper.swift */; };
+		E81D224A242A192A0045FB9D /* ASVideoContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81D2249242A192A0045FB9D /* ASVideoContainer.swift */; };
+		E81D224C242A195B0045FB9D /* ASVideoLayerObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81D224B242A195B0045FB9D /* ASVideoLayerObject.swift */; };
+		E81D224E242A198D0045FB9D /* ASAutoPlayVideoLayerContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81D224D242A198D0045FB9D /* ASAutoPlayVideoLayerContainer.swift */; };
 		E82272892428A7DB007ED29A /* like.json in Resources */ = {isa = PBXBuildFile; fileRef = E82272882428A7DB007ED29A /* like.json */; };
 		E822728C2428B984007ED29A /* CommentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E822728B2428B984007ED29A /* CommentController.swift */; };
 		E822728E2428F848007ED29A /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E822728D2428F848007ED29A /* CommentCell.swift */; };
@@ -31,6 +34,9 @@
 		DA390482DD4BA7A22794ABEA /* Pods_Douyin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Douyin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8117B5F2423B5D500287C4D /* VideoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCell.swift; sourceTree = "<group>"; };
 		E81D22462429F8E50045FB9D /* TimeHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeHelper.swift; sourceTree = "<group>"; };
+		E81D2249242A192A0045FB9D /* ASVideoContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASVideoContainer.swift; sourceTree = "<group>"; };
+		E81D224B242A195B0045FB9D /* ASVideoLayerObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASVideoLayerObject.swift; sourceTree = "<group>"; };
+		E81D224D242A198D0045FB9D /* ASAutoPlayVideoLayerContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASAutoPlayVideoLayerContainer.swift; sourceTree = "<group>"; };
 		E82272882428A7DB007ED29A /* like.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = like.json; sourceTree = "<group>"; };
 		E822728B2428B984007ED29A /* CommentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentController.swift; sourceTree = "<group>"; };
 		E822728D2428F848007ED29A /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
@@ -75,6 +81,16 @@
 				4E0B3AF3861562EE4674887D /* Pods-Douyin.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		E81D2248242A190F0045FB9D /* VideoPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				E81D2249242A192A0045FB9D /* ASVideoContainer.swift */,
+				E81D224B242A195B0045FB9D /* ASVideoLayerObject.swift */,
+				E81D224D242A198D0045FB9D /* ASAutoPlayVideoLayerContainer.swift */,
+			);
+			path = VideoPlayer;
 			sourceTree = "<group>";
 		};
 		E822728A2428B348007ED29A /* Assets */ = {
@@ -161,6 +177,7 @@
 		E8CBFCC224273F39003CF329 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				E81D2248242A190F0045FB9D /* VideoPlayer */,
 				E8CBFCC324273F62003CF329 /* ScaleAnimateButton.swift */,
 			);
 			path = Library;
@@ -271,6 +288,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Douyin/Pods-Douyin-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/BMPlayer/BMPlayer.framework",
 				"${BUILT_PRODUCTS_DIR}/ChainableAnimations/ChainableAnimations.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/KingfisherWebP/KingfisherWebP.framework",
@@ -285,6 +303,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BMPlayer.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChainableAnimations.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KingfisherWebP.framework",
@@ -310,11 +329,14 @@
 			files = (
 				E8E5914F2429DC5A00B72C2A /* CommentEntity.swift in Sources */,
 				E8117B602423B5D500287C4D /* VideoCell.swift in Sources */,
+				E81D224E242A198D0045FB9D /* ASAutoPlayVideoLayerContainer.swift in Sources */,
 				E822728C2428B984007ED29A /* CommentController.swift in Sources */,
 				E88243582420FEDA00C23AF8 /* ViewController.swift in Sources */,
 				E882436A242106CF00C23AF8 /* VideoEntity.swift in Sources */,
 				E81D22472429F8E50045FB9D /* TimeHelper.swift in Sources */,
 				E8CBFCC424273F62003CF329 /* ScaleAnimateButton.swift in Sources */,
+				E81D224A242A192A0045FB9D /* ASVideoContainer.swift in Sources */,
+				E81D224C242A195B0045FB9D /* ASVideoLayerObject.swift in Sources */,
 				E822728E2428F848007ED29A /* CommentCell.swift in Sources */,
 				E8C3993E24226F7800870AE1 /* Api.swift in Sources */,
 				E88243562420FEDA00C23AF8 /* AppDelegate.swift in Sources */,
